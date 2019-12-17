@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+void czerwona (void);
+void biala (void);
+
+main()
+{ czerwona ();
+biala ();
+czerwona ();
+biala ();
+
+}
+
+void czerwona (void)
+{
+static int ktory_raz;
+ktory_raz ++;
+cout<<"Funkcja czerwona wywolana "<<ktory_raz<<"raz\n";
+}
+
+void biala (void){
+static int ktory_raz=100;
+ktory_raz= ktory_raz+1;
+cout <<"Funkcja biala wywolana "<<ktory_raz<<"raz\n";
+
+}
